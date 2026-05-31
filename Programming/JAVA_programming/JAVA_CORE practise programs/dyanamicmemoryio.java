@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class dyanamicmemoryio
+{
+    public static void main(String A[])
+    {
+        Scanner sobj=new Scanner(System.in);
+        int size=0;
+        int i=0;
+
+        
+        System.out.println("enter number of elements:");
+        size = sobj.nextInt();
+
+        //dynyamic memory allocation
+        float marks[]=new float[size];
+        
+        //use the memory 
+        System.out.println("enter your marks:  ");
+        for(i=0;i<size;i++)
+        {
+            marks[i]=sobj.nextFloat();
+        }
+
+        System.out.println("entered marks are:  ");
+
+        for(i=0; i<size; i++)
+        {
+            System.out.println(marks[i]);
+        }
+
+        marks=null;
+        System.gc(); //garbage collector
+        
+        sobj.close();
+
+
+
+
+    }
+
+
+
+
+
+
+}
