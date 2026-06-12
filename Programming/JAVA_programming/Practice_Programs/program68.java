@@ -44,6 +44,7 @@ class program68
         {
             System.out.println("It is not prime");
         }
+        sobj.close();
     }
 }
 

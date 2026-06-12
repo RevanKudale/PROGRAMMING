@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+
+
+
+void Update(int Arr[], int iSize)
+{
+int iCnt = 0;
+    for(iCnt=0; iCnt<iSize; iCnt++)
+    {
+    Arr[iCnt]++;
+    }
+    
+}
+int main()
+{
+    int Brr[] = {10, 20 ,30, 40, 50};
+    int iCnt = 0;
+
+    printf("Array of elements before the function call: \n");
+
+    for(iCnt=0; iCnt<5; iCnt++)
+    {
+        printf("%d ",Brr[iCnt]);
+    }
+    printf("\nArray of elements after the function call: \n");
+    Update(Brr,5);
+
+    for(iCnt=0; iCnt<5; iCnt++)
+    {
+        printf("%d ",Brr[iCnt]);
+    }
+    return 0;
+}

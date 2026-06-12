@@ -41,5 +41,6 @@ class program44
         {
             System.out.println("Number is not divisible by 3 & 5");
         }
+        sobj.close();
     }
 }

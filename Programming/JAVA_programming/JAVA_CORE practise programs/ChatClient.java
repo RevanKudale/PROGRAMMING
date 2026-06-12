@@ -5,33 +5,34 @@ class ChatClient
 {
     public static void main(String A[]) throws Exception
     {
-    System.out.println("Chat Client Application is Running....");
+        System.out.println("Client application is running...");
 
-    Socket sobj = new Socket("localhost",2100);
-
-    System.out.println("Client is Connected to Server Successfully....");
-
-    PrintStream pobj = new PrintStream(sobj.getOutputStream());
-        
-    BufferedReader bobj1 = new BufferedReader(new InputStreamReader(sobj.getInputStream()));
-
-    BufferedReader bobj2 = new BufferedReader(new InputStreamReader(System.in));
-
+        Socket sobj = new Socket("localhost",2100);
     
-    System.out.println("-----------------------------------------------");
-    System.out.println("------------Marvellous Chat Client-------------");
-    System.out.println("-----------------------------------------------");
+        System.out.println("Connection is succesful with server");
    
+        PrintStream pobj = new PrintStream(sobj.getOutputStream());
 
-    String str1 = null ,str2 = null;
+        BufferedReader bobj1 = new BufferedReader(new InputStreamReader(sobj.getInputStream()));
 
-    System.out.println("Enter Message for Server : ");
-    while (!(str2 = bobj2.readLine()).equals("end"))
+        BufferedReader bobj2 = new BufferedReader(new InputStreamReader(System.in));
+        
+        System.out.println("-------------------------------------------");
+        System.out.println("--------- Marvellous Chat Client ----------");
+        System.out.println("-------------------------------------------");
+    
+        String str1 = null, str2 = null;
+
+        System.out.println("Enter message for server : ");
+
+        while(!(str1 = bobj2.readLine()).equals("end"))
         {
             pobj.println(str1);
-            str1 = bobj1.readLine();
-            System.out.println("Server Says : "+str2);
-            System.out.println("Enter Message for Server : ");
+            str2 = bobj1.readLine();
+            System.out.println("Server says : "+str2);
+            System.out.println("Enter message for server : ");
         }
+
+        sobj.close();
     }
 }

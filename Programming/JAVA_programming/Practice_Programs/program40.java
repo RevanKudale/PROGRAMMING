@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class program40
 {
-    void CheckDivisible(int iNo)
+    static void CheckDivisible(int iNo)
     {
         if((iNo % 3 == 0) && (iNo % 5 == 0))
         {
@@ -25,7 +25,8 @@ class program40
         System.out.println("Enter number : ");
         iValue = sobj.nextInt();
 
-        CheckDivisible(iValue);     // Error
+        CheckDivisible(iValue);
+        sobj.close();   
 
     }
 }

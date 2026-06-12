@@ -36,6 +36,7 @@ class program49
         iRet = nobj.SumFactors(iValue);
         
         System.out.println("Summation of factors : "+iRet);
+        sobj.close();
     }
 }
 

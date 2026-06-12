@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+#pragma pack(1) 
+
+class ArrayX
+{
+    public:
+        int *Arr;
+        int iSize;
+
+        ArrayX(int X)
+
+};
+
+int main()
+{
+    ArrayX aobj; //ERROR
+    cout<<sizeof(aobj)<<endl; //no padding 
+
+    return 0;
+}

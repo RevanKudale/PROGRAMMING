@@ -26,6 +26,7 @@ class program41
         iValue = sobj.nextInt();
 
         CheckDivisible(iValue);
+        sobj.close();
 
     }
 }

@@ -5,11 +5,9 @@ class DigitX
 {
     public int CountDigits(int iNo)
     {
-        int iDigit = 0;
         int iCount = 0;
         while(iNo != 0)
         {
-            iDigit = iNo % 10; // Extract the last digit
             iNo = iNo / 10; // Remove the last digit
             iCount++;
         }

@@ -30,7 +30,7 @@ class program47
         NumberX nobj = new NumberX();
 
         nobj.DisplayFactors(iValue);
-        
+        sobj.close();
     }
 }
 

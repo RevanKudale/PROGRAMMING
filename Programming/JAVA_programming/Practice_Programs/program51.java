@@ -54,6 +54,7 @@ class program51
         {
             System.out.println("It is not perfect");
         }
+        sobj.close();
     }
 }
 

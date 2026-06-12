@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int Summation(int Arr[], int iSize)
+{
+    int iCnt = 0,  iSum=0;
+
+    for(iCnt = 0; iCnt < iSize; iCnt++)
+    {
+        iSum = iSum + Arr[iCnt];
+    }
+    return iSum;
+}
+int main()
+{
+    int *Brr = NULL;
+
+    int iLength = 0, iCnt = 0, iRet = 0;
+
+    cout<<"Enter the number of elements: \n";
+    cin>>iLength;
+
+    Brr = new int[iLength]; //NEW OPEARTOR CALLS THE MALLOC FOR MEMORY ALLOCATION
+
+    cout<<"Enter the Elements: \n";
+    
+    for(iCnt = 0; iCnt < iLength; iCnt++)
+    {
+        cin>>Brr[iCnt]; //INPUT GHENYA SATHI FOR LOOP
+    }
+    cout<<"Element of the Array are: \n";
+    for(iCnt = 0; iCnt < iLength; iCnt++)
+    {
+        cout<<Brr[iCnt]<<endl;
+    }
+
+    iRet = Summation(Brr, iLength);
+    cout<<"Summation is: "<<iRet<<endl;
+    
+    delete[]Brr; //deallocating the memory in cpp is little diff 
+    return 0;
+}

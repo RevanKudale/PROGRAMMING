@@ -33,7 +33,7 @@ class program48
         NumberX nobj = new NumberX();
 
         nobj.SumFactors(iValue);
-        
+        sobj.close();
     }
 }
 
